@@ -39,6 +39,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: _addTaskButton(),
     );
   }
+  
 
   void displayTaskPoppup() {
     showDialog(
