@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: _heightDevice * 0.15,
+        toolbarHeight: _heightDevice * 0.10,
         title: const Text(
           'QuickTasker',
           style: TextStyle(fontSize: 25),
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
         context: context,
         builder: (BuildContext _context) {
           return AlertDialog(
-            title: const Text('Add New Task !'),
+            title: const Text('Add a New Task !'),
             content: TextField(
               onSubmitted: (_) {
                 if (newTaskContent != null) {
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
             title: Text(
               task.content,
               style: TextStyle(
-                  decoration: task.done ? TextDecoration.lineThrough : null),
+                  decoration: task.done ? TextDecoration.lineThrough : null, fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
               task.timeStamp.toString(),
